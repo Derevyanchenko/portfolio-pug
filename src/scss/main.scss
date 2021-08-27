@@ -1,23 +1,31 @@
-// Vars
-@import "./vars/variables";
-
 // Libs
-@import "./libs/bootstrap-reboot.min.scss";
-@import "./libs/bootstrap-grid.min.scss";
+// @import "./libs/bootstrap-reboot";
+@import "./libs/bootstrap-grid";
 
-// Base
-@import "./base/base";
-@import "./base/remove-mobile-support";
+// base
+@import "./variables";
+@import "./base";
 
-// UI-KIT
-@import "./ui-kit/**/*.scss";
+// components
+@import "./components/buttons";
+@import "./components/project-category";
+@import "./components/project-item";
+@import "./components/github-item";
+@import "./components/skills-content";
+@import "./components/skills-icon";
+@import "./components/review-img";
 
-// Blocks, sections, layouts
-@import "./blocks/**/*.scss";
+// sections
+@import "./sections/header";
+@import "./sections/banner";
+@import "./sections/projects";
+@import "./sections/github-projects";
+@import "./sections/reviews";
+@import "./sections/skills";
+@import "./sections/footer";
 
-// Utils
-@import "./utils/utils";
 
-// Notes
-// font-family: 'Montserrat', sans-serif;
-// font-family: 'Playfair Display', sans-serif;
+/*
+font-family: 'Montserrat', sans-serif; - BASE FONT
+font-family: 'Playfair Display', serif;
+*/

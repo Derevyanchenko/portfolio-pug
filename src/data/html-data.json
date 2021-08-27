@@ -1,0 +1,127 @@
+{
+    "menu": [
+        {
+            "name": "Github репозитории",
+            "link": "#github"
+        },
+        {
+            "name": "Мои навыки",
+            "link": "#skills"
+        },
+        {
+            "name": "Отзывы",
+            "link": "#reviews"
+        }
+
+    ],
+    "socialLinks": [
+        {
+            "name": "telegram",
+            "link": "https://t.me/danil2707",
+            "icon": "./img/icons/telegram-icon.svg",
+            "showInHeader": "true"
+        },
+        {
+            "name": "viber",
+            "link": "viber://chat?number=380634475285",
+            "icon": "./img/icons/viber-icon.svg",
+            "showInHeader": "true"
+        },
+        {
+            "name": "gmail",
+            "link": "mailto:danilderevyanchenko@gmail.com",
+            "icon": "./img/icons/gmail-icon.svg",
+            "showInHeader": "false"
+        }
+    ],
+    "projects": [
+        {
+            "title": "“Томт”",
+            "categories": ["Wordpress"],
+            "image": "/img/portfolio/portfolio-img-tomt.png",
+            "content": [
+                "Тип сайта .......................................Многостраничный",
+                "Кол-во уник. страниц ...................................... 10 стр.",
+                "Срок выполнения ............................................. 8 дней"
+            ],
+            "link": "https://google.com",
+            "show": "false" 
+        },
+        {
+            "title": "“Pozitiv life”",
+            "categories": ["Wordpress", "HTML-Верстка"],
+            "image": "/img/portfolio/portfolio-img-pozitiv.png",
+            "content": [
+                "Тип сайта ..................................................................Блог",
+                "Кол-во уник. страниц ........................................ 6 стр.",
+                "Срок выполнения ......................................... 4-5 дней"
+            ],
+            "link": "https://google.com",
+            "show": "false" 
+        },
+        {
+            "title": "“Чистый дом”",
+            "categories": ["Wordpress", "HTML-Верстка"],
+            "image": "/img/portfolio/portfolio-img-cleaning.png",
+            "content": [
+                "Тип сайта ......................................Многостраничный",
+                "Кол-во уник. страниц ...................................... 10 стр.",
+                "Срок выполнения ............................................. 8 дней"
+            ],
+            "link": "https://google.com",
+            "show": "false" 
+        }
+    ],
+    "githubRepos": [
+        {
+            "title": "Booking Wp plugin",
+            "content": "Плагин система-бронирования недвижимости для CMS WordPress",
+            "link": "https://google.com"
+        },
+        {
+            "title": "WooCommerce shop",
+            "content": "Интернет магазин на WooCommerce",
+            "link": "https://google.com"
+        },
+        {
+            "title": "Tomt site",
+            "content": "Корпоративный сайт",
+            "link": "https://google.com"
+        },
+        {
+            "title": "Gutenberg blocks with React.js",
+            "content": "Разработка своих виджетов для блочного редактора Gutenberg, написан на React.js",
+            "link": "https://google.com"
+        }
+    ],
+    "skills": [
+        {
+            "category": "Frontend",
+            "content": [
+                "- html / pug (шаблонизатор)",
+                "- css / scss / bootstrap",
+                "- jvascript / JQuery / ES6 / basics React.js",
+                "- Gulp, Webpack",
+                "- git / github / bitbucket / gitlab"
+            ]
+        },
+        {
+            "category": "Wordpress",
+            "content": [
+               "- Разработка Wordpress тем",
+               "- Разработка Wordpress плагинов",
+               "- Разработка WooCommerce тем (базовые навыки)",
+               "- Разработка собственных блоков для Gutenberg ",
+               "- Разработка собственных виджетов для Elementor Pagе Builder",
+               "- Плагины: ACF, CPT, WooCommerce, Elementor, Polylang, CF7"
+            ]
+        }
+    ],
+    "reviews": [
+        {"img": "./img/reviews/review-img-1.png"},
+        {"img": "./img/reviews/review-img-1.png"},
+        {"img": "./img/reviews/review-img-1.png"},
+        {"img": "./img/reviews/review-img-1.png"}
+    ],
+    "copyright": "Danil Derevyanchenko © 2018-2021 All Rights Reserved."
+}

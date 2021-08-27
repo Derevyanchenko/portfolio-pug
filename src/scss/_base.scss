@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Stolzl Display';
+    src: url('./fonts/StolzlDisplay-Medium.eot');
+    src: local('Stolzl Display Medium'), local('StolzlDisplay-Medium'),
+        url('./fonts/StolzlDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/StolzlDisplay-Medium.woff2') format('woff2'),
+        url('./fonts/StolzlDisplay-Medium.woff') format('woff'),
+        url('./fonts/StolzlDisplay-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl Display';
+    src: url('./fonts/StolzlDisplay-Bold.eot');
+    src: local('Stolzl Display Bold'), local('StolzlDisplay-Bold'),
+        url('./fonts/StolzlDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/StolzlDisplay-Bold.woff2') format('woff2'),
+        url('./fonts/StolzlDisplay-Bold.woff') format('woff'),
+        url('./fonts/StolzlDisplay-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gilroy-Regular.woff') format('woff'),
+        url('fonts/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('fonts/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Gilroy-Medium.woff') format('woff'),
+        url('fonts/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/bg.png) repeat top;
+    margin: 0;
+    font-family: 'Gilroy';
+    font-weight: 500;
+    color: $black;
+}
+
+li {
+    list-style: none;
+}
+
+a { 
+    text-decoration: none;
+    color: $black;
+}
+
+// titles and text
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Stolzl Display';
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 55px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 36px;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 120%;
+    font-weight: bold;
+    
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 120%;
+    font-weight: bold;
+}
+
+.section__title {
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section__text {
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+}
+
+@media (min-width: 1200px) {
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        max-width: 1170px;
+    }
+}

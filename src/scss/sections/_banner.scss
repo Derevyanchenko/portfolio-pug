@@ -1,0 +1,67 @@
+// banner
+
+.main {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.main__img {
+    max-width: 45%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+        max-width: 100%;
+    }
+}
+
+.main__decoration {
+    max-width: 13%;
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    img {
+        max-width: 100%;
+    }
+}
+
+.main__img--mob {
+    display: none;
+}
+
+.main__wrapper{ 
+    
+}
+
+.main__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $viloet-gradiend;
+        margin-right: 25px;
+        img {
+
+        }
+    }
+
+    p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+}
+
+.main__btn {
+    margin-top: 55px;
+}

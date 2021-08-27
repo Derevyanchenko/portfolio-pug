@@ -1,0 +1,6 @@
+.projects 
+    .container
+        .row
+            each project in jsonData.projects
+                .col-lg-10.offset-lg-1
+                    +project-item(project.title, project.categories, project.image, project.content, project.link, project.show)

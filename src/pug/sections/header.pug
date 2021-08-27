@@ -1,0 +1,19 @@
+header.header
+    .container
+        .header__wrapper
+            .logo 
+                img(src="./img/icons/logo-icon.svg", alt="")
+                p Danil Derevyanchenko
+
+            ul.header__menu.menu
+                each menuItem in jsonData.menu
+                    li.menu__item 
+                        a.menu__link(href=menuItem.link) #{menuItem.name} 
+
+            .header__right
+                a.header__number(href="tel:+380664475285") +38 066 447 5285
+                .header__socials
+                    each social in jsonData.socialLinks
+                        if JSON.parse(social.showInHeader)
+                            a.header__socials-item(href=social.link) 
+                                img(src=social.icon, alt="")
