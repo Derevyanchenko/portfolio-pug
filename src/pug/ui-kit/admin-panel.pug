@@ -1,0 +1,53 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Админ панель';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Админ панель
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            include ./../sections/admin-panel.pug
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/admin-panel.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+            sections/admin-panel.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .admin-panel
+                .admin-panel__block-list
+                    a(href="#").admin-panel__link
+                        img  src="./../img/admin-panel/target.svg" alt="Перейти в админ панель"
+                        .span Перейти в админ панель
+                    a(href="#").admin-panel__link
+                        img  src="./../img/admin-panel/user.svg" alt=" Профиль"
+                        .span Профиль
+                    a(href="#").admin-panel__link
+                        .admin-panel__message 
+                            img  src="./../img/admin-panel/mail.svg" alt=" Сообщение"
+                        .span Сообщение
+                    a(href="#").admin-panel__link
+                        .admin-panel__comments 
+                            img  src="./../img/admin-panel/message-square.svg" alt="Комментарии"
+                        .span Комментарии
+                    a(href="#").admin-panel__link
+                        img  src="./../img/admin-panel/edit-3.svg" alt="Редактировать эту страницу"
+                        .span Редактировать эту страницу
+
+                    button.admin-panel__block-button Выход
+          

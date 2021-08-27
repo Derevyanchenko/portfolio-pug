@@ -1,0 +1,8 @@
+mixin card-project(title, img, technology, link="#")
+    .card-project
+        .card-project__img-wrapper
+            a(href= link)
+                img(src= img alt= title)
+                .card-project__technology #{technology}
+        h4.card-project__title
+            a(href= link) #{title}

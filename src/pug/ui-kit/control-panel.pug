@@ -1,0 +1,69 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Панель управления';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Панель управления
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-height
+            include ./../sections/control-panel.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/control-panel.pug          
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/control-panel.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .control-panel
+                .control-panel__container
+                    .control-panel__title-wrapper
+                        h2.control-panel__title Digital Nomad
+                        p.control-panel__subtitle панель управления
+                    ul.control-panel__list
+                        +control-panel-link("Блог", "./../img/control-panel/book.svg").control-panel__list-link--active
+                        ul.control-panel__list
+                            +control-panel-link("Добавить пост", "./../img/control-panel/corner.svg").control-panel__inner-link.control-panel__inner-link--active 
+                            +control-panel-link("Все записи", "./../img/control-panel/corner.svg").control-panel__inner-link
+                        +control-panel-link("Портфолио", "./../img/control-panel/portfolio.svg")
+                        +control-panel-link("Страницы", "./../img/control-panel/file.svg")
+                        +control-panel-link("Сообщения", "./../img/control-panel/mail.svg", "8")
+                        +control-panel-link("Комментарии", "./../img/control-panel/message.svg", "15")
+                        +control-panel-link("Пользователи", "./../img/control-panel/users.svg")
+                        +control-panel-link("Настройки", "./../img/control-panel/settings.svg")
+                ul.control-panel__list
+                    +control-panel-link("Мой профиль", "./../img/control-panel/user.svg")
+                    +control-panel-link("Выход", "./../img/control-panel/log-out.svg")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/control-panel-link.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin control-panel-link(linkText, linkImg, number, link="#")
+                li.control-panel__list-item
+                    a(href= link).control-panel__list-link&attributes(attributes)
+                        .control-panel__list-img-wrapper
+                            img(src= linkImg, alt="icon").control-panel__list-img
+                            if number
+                                .control-panel__list-img-badge \#{number}
+                            else                
+                        | \#{linkText}

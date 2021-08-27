@@ -1,0 +1,61 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Блок загрузки файла';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Блок загрузки файла
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-downloads_posts
+            .mb-50
+                +block-upload('Обложка поста:', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.')
+            +block-upload('Обложка поста:', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.', true)
+            //- +block-downloads('Обложка поста:', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.')
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +block-upload('Обложка поста:', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.')
+            +block-upload('Обложка поста:', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.', true)
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/block-upload.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin block-upload(title, text, fileAttached)
+
+                if fileAttached
+                    - var fileName = "some-picture.jpg"
+                else
+                    - var fileName = "Файл не выбран"
+
+                .block-upload
+                    .block-upload__description
+                        .block-upload__title \#{title}
+                        p \#{text}
+                        .block-upload__file-wrapper
+                            +file-button()
+                            .block-upload__file-name \#{fileName}
+
+                    if fileAttached
+                        .block-upload__img
+                            img(src='./../img/block-downloads/block-downloads.jpg' alt="Загрузка картинки")
+                            .block-downloads__delete
+                                +delete-button()

@@ -1,0 +1,40 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Инпуты';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Инпуты
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            +input("Введите название записи", "Заголовок поста")        
+            +input("Ваше имя")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +input("Введите название записи", "Заголовок поста")    
+            +input("Ваше имя")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/input.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin input(placeholder, label)
+                if label
+                    label.input__label \#{label}
+                        input.input(type="text" placeholder= placeholder)&attributes(attributes)
+                else
+                    input.input(type="text" placeholder= placeholder)&attributes(attributes)

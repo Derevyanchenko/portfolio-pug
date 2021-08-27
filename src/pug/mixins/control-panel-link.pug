@@ -1,0 +1,10 @@
+mixin control-panel-link(linkText, linkImg, number, link="#")
+    li.control-panel__list-item
+        a(href= link).control-panel__list-link&attributes(attributes)
+            .control-panel__list-img-wrapper
+                img(src= linkImg, alt="icon").control-panel__list-img
+                if number
+                    .control-panel__list-img-badge #{number}
+                else                
+            | #{linkText}
+        block

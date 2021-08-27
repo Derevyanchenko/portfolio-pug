@@ -1,0 +1,39 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Карточка для проекта';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Карточка для проекта
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +card-project("Архитектурное бюро John Doe и партнеры. Сайт под ключ", "./../img/projects/project-img-01.jpg", "HTML, CSS, wordpress")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +card-project("Архитектурное бюро John Doe и партнеры. Сайт под ключ", "./../img/projects/project-img-01.jpg", "HTML, CSS, wordpress")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/card-project.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin card-project(title, img, technology, link="#")
+                .card-project
+                    .card-project__img-wrapper
+                        a(href= link)
+                            img(src= img alt= title)
+                            .card-project__technology \#{technology}
+                    h4.card-project__title
+                        a(href= link) \#{title}

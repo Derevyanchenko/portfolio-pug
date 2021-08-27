@@ -1,0 +1,21 @@
+mixin notifications(title, notifications)
+    //- Проверяем тип нотификации и определяем нужный класс
+    if (notifications == "error")
+        - var typeNotifications = "notifications__title--error"
+    else if  (notifications == "success")
+        - var typeNotifications = "notifications__title--success"
+    else
+        - var typeNotifications = ""
+    //- Проверяем на вложенность блока и убираем скругление углов дополнительным классом
+    if block
+        - var additionalClass = "notifications__title--with-message"
+    else
+        - var additionalClass = ""
+    //- Создаем разметку
+    .notifications(class=additionalClass)
+        .notifications__title(class= typeNotifications) #{title}
+        //- Если есть вложенный блок, создаем разметку
+        if block
+            .notifications__message
+                block
+

@@ -1,0 +1,23 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Блог';
+    - var pageClass= "";
+    - var pageLink = "blog.html"
+
+block content
+    +section-header("inner", pageLink)
+    main.page-blog
+        .container
+            .page-blog__header
+                +heading("Блог")
+            //-Карточки с проектами
+            .page-blog__posts
+                each post in jsonData.blogPosts
+                    +card-post(post.title, post.img)
+            //-Пагинация
+            .page-blog__pagination
+                include ./../sections/section-pagination.pug
+        //-Подвал      
+    include ./../sections/section-footer.pug

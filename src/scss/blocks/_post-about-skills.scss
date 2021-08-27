@@ -1,0 +1,49 @@
+.post-about-skills  {
+    max-width: 540px;
+    color: $black;
+}      
+
+.post-about-skills__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.2;
+
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.skills__list {   
+    margin: 0; 
+    padding: 0;
+    padding-left: 15px;
+    list-style: none;
+
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.5; 
+}
+
+.skills__list-item {
+    position: relative;
+    margin-bottom: 5px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: -14px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $black;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

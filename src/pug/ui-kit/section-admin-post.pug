@@ -1,0 +1,43 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция добавления поста';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция добавления поста
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo.ui-kit__component-demo--dark-bg
+        include ./../sections/section-admin-post.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-admin-post.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-admin-post.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .section-admin-post
+                .section-admin-post__wrapper     
+                    +heading('Добавить пост')
+                .section-admin-post__wrapper 
+                    +input("Заголовок поста", "Введите название записиа") 
+                .section-admin-post__wrapper 
+                    +textarea('Введите текст', 'Содержимое поста') 
+                .section-admin-post__wrapper      
+                    +block-upload('Обложка поста:', 'Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более. Вес до 2Мб.') 
+                .section-admin-post__wrapper  
+                    +primary-button('Опубликовать')
+           

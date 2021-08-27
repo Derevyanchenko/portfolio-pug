@@ -1,0 +1,12 @@
+.section-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-pagination__item {
+  margin-right: 15px;
+  &:last-child {
+    margin-right: 0;
+  }
+}

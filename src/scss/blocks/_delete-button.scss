@@ -1,0 +1,34 @@
+$redDeletebutton: #C93535;
+$lightredDeletebutton: #E81F1F;
+$darkredDeletebutton: #A01717;
+
+.delete-button {
+    border: none;
+    border-radius: 57px;
+    background: $redDeletebutton;
+    outline: none;
+
+    padding: 5px 20px;
+
+    color: $white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background: $lightredDeletebutton;
+    }
+
+    &:active {
+        background: $darkredDeletebutton;
+    }
+}
+
+
+
+
+

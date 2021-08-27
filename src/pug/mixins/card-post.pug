@@ -1,0 +1,7 @@
+mixin card-post(title, img, link="#")
+    .card-post
+        .card-post__img
+            a(href= link)
+                img(src= img alt= title)
+        h4.card-post__title
+            a(href= link)  #{title}

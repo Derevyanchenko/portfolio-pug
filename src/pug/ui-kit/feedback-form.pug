@@ -1,0 +1,44 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Форма обратной связи';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Форма обратной связи
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            include ./../sections/feedback-form.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/feedback-form.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/feedback-form.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            form.feedback-form
+                .feedback-form__heading
+                    +heading("Напишите мне")
+                .feedback-form__input
+                    +input("Ваше имя")
+                .feedback-form__input
+                    +input("Email")
+                .feedback-form__input    
+                    +textarea("Введите сообщение")
+                .feedback-form__upload
+                    +block-upload('Прикрепить файл:', 'jpg, png, pdf, вес до 2 Мб')
+                +primary-button()

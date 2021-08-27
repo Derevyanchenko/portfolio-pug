@@ -1,0 +1,38 @@
+.post-pagination {      
+    display: flex;
+    width: 100%;     
+}
+.post-pagination__button {    
+    display: block;
+    text-align: center;   
+    
+    width: 50%;
+    border-radius: 8px 0px 0px 8px;
+    border: 1px solid rgba(126, 155, 189, 0.3);
+    background-color: $white;
+
+    padding-top: 14px;
+    padding-bottom: 15px;  
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;  
+    color: #7E9BBD;
+
+    &--forward {
+        border-radius: 0px 8px 8px 0px;
+    }
+
+    &:hover,
+    &:focus {
+        background: #EFF6FB;
+        text-decoration: none;   
+        color: #4374AD;
+    }
+
+    &:active {
+        background: #9BC3DC;  
+        color: $white;
+    }  
+}

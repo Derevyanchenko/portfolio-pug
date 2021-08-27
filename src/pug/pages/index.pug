@@ -1,0 +1,57 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass= "ui";
+
+block content
+	.container.text-center.pt-75.pb-60
+		h1.mb-55 Проект команды HTML-PRO 01
+		.row.mb-50
+			.col
+				.ui-card
+					h3.mb-25 UI-Kit
+					+test-button("./ui-kit/index.html")
+			.col
+				.ui-card
+					h3.mb-25 Главная страница
+					+test-button("./main.html")
+			.col
+				.ui-card
+					h3.mb-25 Портфолио
+					+test-button("./portfolio.html")
+		.row.mb-50
+			.col
+				.ui-card
+					h3.mb-25 Обо мне
+					+test-button("./about.html")
+			.col
+				.ui-card
+					h3.mb-25 Страница входа
+					+test-button("./enter-page.html")
+			.col
+				.ui-card
+					h3.mb-25 Регистрация
+					+test-button("registration-page.html")
+		.row.mb-50
+			.col
+				.ui-card
+					h3.mb-25 Блог
+					+test-button("./blog.html")
+			.col
+				.ui-card
+					h3.mb-25 Страница с постом
+					+test-button("./post.html")
+			.col
+				.ui-card
+					h3.mb-25 Контакты
+					+test-button("./contacts.html")
+		.row
+			.col-4
+				.ui-card
+					h3.mb-25 Админка
+					+test-button("./admin-page.html")     
+
+			
+

@@ -1,0 +1,45 @@
+block variables
+
+<!DOCTYPE html>
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        //- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title #{title}
+
+        meta(name="keywords" content= keywords)
+        meta(name="description" content= description)
+
+        <!-- build:css1 css/vendor.css -->
+        <!-- endbuild -->
+
+        <!-- build:css2 css/styles.css -->
+        link(rel="stylesheet", href="./css/main.css")
+        <!-- endbuild -->
+
+    body(class=pageClass)
+        //- Шапка
+        header.authorization-page__header
+            h2.authorization-page__header-title Digital Nomad
+            p.authorization-page__header-subtitle cайт IT специалиста
+            
+        //- Контент
+        block content
+
+        //- Подвал
+        footer.authorization-page__footer
+            .authorization-page__footer__copyright
+                p © Юрий Ключевский
+                p Создано в WebCademy.ru в 2020 году.
+
+        <!-- build:js1 js/jquery.js -->
+        <script src="./js/jquery-3.3.1.min.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js2 js/vendor.js -->
+        <!-- endbuild -->
+
+        <!-- build:js3 js/main.js -->
+        <script src="./js/main.js"></script>
+        <!-- endbuild -->

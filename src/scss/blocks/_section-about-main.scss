@@ -1,0 +1,22 @@
+.section-about-main {
+    background: #F5F7FA;
+    padding: 60px 0;
+}
+
+.section-about-main__img img{    
+    display: block;
+    width: 520px;
+    height: 415px;
+    object-fit: cover;   
+
+    margin-right: 50px;
+
+    background: #C4C4C4;
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+    border-radius: 4px;
+}
+                
+.section-about-main__content {
+    margin-bottom: 35px;
+}
+             

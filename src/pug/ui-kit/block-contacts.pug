@@ -1,0 +1,54 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Блок контакты';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Блок контакты
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        include ./../sections/block-contacts.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/block-contacts.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/block-contacts.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .block-contacts
+                .block-contacts__title
+                    +heading("Контакты")
+                .block-contacts__info
+                    +contacts("Email", "hi@digitalnomad.pro", "mailto:hi@digitalnomad.pro")
+                    +contacts("Мобильный", "+7 (905) 555-77-88", "tel:+79055557788")
+                    +contacts("Адрес", "Москва, Пресненская набережная, д. 6, стр. 2")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/contacts.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin contacts(communicationMethod, contact, link)
+                dl
+                    dt \#{communicationMethod}:
+                    if link
+                        dd.block-contacts__info--contact \#[a(href= link) \#{contact}]
+                    else
+                        dd.block-contacts__info--contact \#{contact}

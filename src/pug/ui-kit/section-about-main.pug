@@ -1,0 +1,40 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция обо мне на главной';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция обо мне на главной
+
+    //- Демонстрация компонента
+    include ./../sections/section-about-main.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-about-main.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-about-main.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .section-about-main
+                .container
+                    .row
+                        .section-about-main__img
+                            img(src= "./../img/section-about-main/section-about-main.jpg" alt= "Изображение")
+                        .section-about-main__wrapper
+                            .section-about-main__content
+                                +post-about-me('обо мне')
+                                    p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!              
+                            +post-about-skills()      

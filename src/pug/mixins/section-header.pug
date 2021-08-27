@@ -1,0 +1,21 @@
+mixin section-header(page, pageLink)
+    if page == "inner"
+        .section-header.section-header--inner
+            .section-header__content
+                h2.section-header__content-title Digital Nomad
+                p.section-header__content-subtitle cайт IT специалиста
+                nav.nav
+                    ul.nav__list
+                        each item in nav
+                            li.nav__list-item
+                                a(href= item.link class=(item.link === pageLink ? "nav__list-item-link--active" : undefined)).nav__list-item-link #{item.name}
+    else
+        .section-header
+            .section-header__content
+                h1.section-header__content-title Digital Nomad
+                p.section-header__content-subtitle веб-разработчик, ui/ux дизайнер
+                nav.nav
+                    ul.nav__list
+                        each item in nav
+                            li.nav__list-item
+                                a(href= item.link).nav__list-item-link #{item.name}

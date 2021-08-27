@@ -1,0 +1,22 @@
+.page-post {
+    padding: 60px 0 90px;
+}
+
+.page-post__post-pagination {
+    margin: 0 auto 60px;
+    max-width: 920px;
+}
+
+.page-post__comments, .page-post__post-comments {
+    margin: 0 auto 60px;
+    max-width: 920px;
+}
+
+.page-post__title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.page-post__comments-comment:not(:last-child) {
+    margin-bottom: 20px;
+}

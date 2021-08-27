@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопка пост-навигации';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Кнопка пост-навигации
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +post-pagination-button()
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +post-pagination-button()
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/post-pagination-button.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin post-pagination-button ( linkback ="#", linkforward ="#")
+                .post-pagination               
+                    a(class="post-pagination__button" href= linkback) Назад             
+                    a(class="post-pagination__button post-pagination__button--forward" href= linkforward) Вперед

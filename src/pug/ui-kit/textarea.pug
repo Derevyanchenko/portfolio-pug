@@ -1,0 +1,40 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Текстареа';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Текстареа
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            +textarea("Введите текст", "Содержимое поста")        
+            +textarea("Ваше имя")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +textarea("Введите текст", "Содержимое поста")    
+            +textarea("Ваше имя")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/textarea.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin textarea(placeholder, label)
+                if label
+                    label.textarea__label \#{label}
+                        textarea.textarea.textarea--width-label(placeholder= placeholder)&attributes(attributes)
+                else
+                    textarea.textarea(placeholder= placeholder)&attributes(attributes)

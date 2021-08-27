@@ -1,0 +1,25 @@
+.page-portfolio {
+    padding: 60px 0 90px;
+}
+
+.page-portfolio__header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.page-portfolio__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.page-portfolio__cards .card-project {
+    margin-bottom: 40px;
+    &:nth-last-child(-n+2) {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+        margin-right: 30px;
+    }
+}

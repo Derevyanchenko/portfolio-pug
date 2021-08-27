@@ -1,0 +1,40 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Блок ТаймЛайн';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Блок ТаймЛайн
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +timeline-item("февраль 2020 — по настояще время", "Frontend разработчик, Athlas IT solutions")
+            p Работа в команде социальной сети Атлас. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов.
+        
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +timeline-item("февраль 2020 — по настояще время", "Frontend разработчик, Athlas IT solutions")
+                p Работа в команде социальной сети Атлас. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов.
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/timeline-item.pug
+
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin timeline-item(info, title)
+                .timeline-item
+                .timeline-item__info
+                .timeline-item__title 
+                .timeline-item__content
+                    block 

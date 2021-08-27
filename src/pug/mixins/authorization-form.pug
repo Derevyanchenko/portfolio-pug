@@ -1,0 +1,26 @@
+mixin authorization-form(type, linkForgotPassword, linkReg, linkEnter)
+    if type == "enter"
+        form.authorization-form&attributes(attributes)
+            .authorization-form__heading
+                +heading("Вход на сайт")
+            .authorization-form__input
+                +input("Email")
+            .authorization-form__input
+                +input("Пароль")(type="password")
+            .authorization-form__button
+                +primary-button("Вход на сайт")
+            .authorization-form__links
+                a(href= linkForgotPassword) Забыл пароль
+                a(href= linkReg) Регистрация
+    else if type == "reg"
+        form.authorization-form&attributes(attributes)
+            .authorization-form__heading
+                +heading("Регистрация")
+            .authorization-form__input
+                +input("Email")
+            .authorization-form__input
+                +input("Пароль")(type="password")
+            .authorization-form__button
+                +primary-button("Зарегистрироваться")
+            .authorization-form__links
+                a(href= linkEnter) Вход на сайт

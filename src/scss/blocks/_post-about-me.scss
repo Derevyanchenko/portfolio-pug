@@ -1,0 +1,25 @@
+.post-about-me {    
+    max-width: 540px;
+    color: $black;
+}
+
+.post-about-me__title {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.2;
+    
+    letter-spacing: 0.2em;
+    text-transform: uppercase;   
+}
+
+.post-about-me p {   
+    margin: 0;   
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.7;     
+}

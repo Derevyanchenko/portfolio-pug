@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция статус';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция статус
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo.ui-kit__component-demo--dark-bg
+        .block-full-width
+            include ./../sections/section-status.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-status.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-status.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            a(href="#").section-status  
+                .section-status-badge Свободен для новых проектов
+                .section-status-text Рассматриваю предложения по верстке и frontend разработке. Подробности

@@ -1,0 +1,20 @@
+mixin block-upload(title, text, fileAttached)
+
+    if fileAttached
+        - var fileName = "some-picture.jpg"
+    else
+        - var fileName = "Файл не выбран"
+
+    .block-upload
+        .block-upload__description
+            .block-upload__title #{title}
+            p #{text}
+            .block-upload__file-wrapper
+                +file-button()
+                .block-upload__file-name #{fileName}
+
+        if fileAttached
+            .block-upload__img
+                img(src='./../img/block-upload/block-upload.jpg' alt="Загрузка картинки")
+                .block-downloads__delete
+                    +delete-button()

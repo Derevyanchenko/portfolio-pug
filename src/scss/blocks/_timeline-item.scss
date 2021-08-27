@@ -1,0 +1,33 @@
+.timeline-item {
+    width: 505px;
+}
+.timeline-item__info {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #7E9BBD;
+    margin-bottom: 10px;
+}
+.timeline-item__title {
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+ 
+.timeline-item__content {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.75;
+}
+
+.timeline-item__content p {
+    margin: 0;
+    margin-bottom: 10px; 
+    &:last-child {
+    margin-bottom: 0;
+    }
+}

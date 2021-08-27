@@ -1,0 +1,33 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Вторичная кнопка
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +secondary-button()
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +secondary-button()
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/secondary-button.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin secondary-button(text="Отмена", link="#")
+                a(class="secondary-button" href= link)&attributes(attributes) \#{text}

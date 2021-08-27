@@ -1,0 +1,12 @@
+mixin comment(author='Джон До', date="05 Мая 2017 года в 15:45", avatar_url, link)
+    .comment
+        .comment__avatar
+            +avatar-small(avatar_url,link)
+        .comment__data
+            .comment__user-info
+                .comment__username #{author}
+                .comment__date
+                    img(src="./../img/favicons/clock.svg", alt="Дата публикации")
+                    | #{date}
+            .comment__text
+                block

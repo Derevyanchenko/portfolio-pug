@@ -1,0 +1,41 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Главная страница';
+    - var pageClass= "index-page";
+
+block variables
+    - var title = 'Digital Nomad веб-разработчик, ui/ux дизайнер';
+    - var pageClass= "";
+    - var pageLink = "main.html"
+
+block content
+    //-Шапка
+    +section-header()
+    main.main-page
+        //- Секция обо мне
+        section.main-page__section-about
+            include ./../sections/section-about-main.pug
+        .container
+            //- Секция статус
+            section.main-page__section-status
+                include ./../sections/section-status.pug
+            //- Секция карточек с проектами
+            section.main-page__projects-cards
+                .main-page__projects-cards-title
+                    +heading("Новые проекты в ", "портфолио")
+                .row
+                    each card in jsonData.mainCards
+                        .col-6
+                            +card-project(card.title, card.img, card.tags)
+            //- Секция карточек с постами
+            section.main-page__posts-cards
+                .main-page__posts-cards-title
+                    +heading("Новые записи в ", "блоге")
+                .row
+                    each card in jsonData.mainPosts
+                        .col-4
+                            +card-post(card.title, card.img)
+        //-Подвал      
+    include ./../sections/section-footer.pug

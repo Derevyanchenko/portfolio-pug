@@ -1,0 +1,20 @@
+extends ../layouts/admin-page.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Админ панель';
+    - var pageClass= "admin-page";
+
+block content
+    .admin-page__left-panel
+        include ./../sections/control-panel.pug
+    .admin-page__content
+        .admin-page__content-form
+            include ./../sections/section-admin-post.pug
+        .admin-page__content-form
+            include ./../sections/section-admin-post.pug
+        .admin-page__content-form
+            include ./../sections/section-admin-post.pug
+        .admin-page__content-form
+            include ./../sections/section-admin-post.pug
+

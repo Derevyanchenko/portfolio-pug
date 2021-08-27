@@ -1,0 +1,21 @@
+.admin-page {
+    background: #E0E0E0;
+}
+
+.admin-page__left-panel {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;    
+}
+
+.admin-page__content {
+    position: absolute;
+    left: 320px;
+    top: 40px;
+}
+
+.admin-page__content-form {
+    margin-bottom: 50px;
+}

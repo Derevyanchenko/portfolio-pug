@@ -1,0 +1,45 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Комментарий';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Комментарий
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            +comment('Джон До', '05 мая 2017 года 15:45', './../img/avatars/comment-avatars.png', '#')
+                p Замечательный парк, обязательно отправлюсь туда этим летом.
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +comment('Джон До', '05 мая 2017 года 15:45', './../img/avatars/comment-avatars.png', '#')
+                p Замечательный парк, обязательно отправлюсь туда этим летом.
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/comment.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin comment(author='Джон До', date="05 Мая 2017 года в 15:45", avatar_url, link)
+                .comment
+                    .comment__avatar
+                        +avatar-small(avatar_url,link)
+                    .comment__data
+                        .comment__user-info
+                            .comment__username \#{author}
+                            .comment__date
+                                img(src="./../img/favicons/clock.svg", alt="Даата публикации")
+                                | \#{date}
+                        .comment__text
+                            block

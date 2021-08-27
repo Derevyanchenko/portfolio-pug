@@ -1,0 +1,49 @@
+.block-contacts__title {
+    margin-bottom: 25px;
+}
+
+.block-contacts__info {
+    font-size: 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 170%;
+    color: #000000;
+}
+
+.block-contacts__info dl {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.block-contacts__info dl dt {
+    margin: 0;
+    padding: 0;
+    margin-right: 5px;
+}
+
+.block-contacts__info dl dd {
+    margin: 0;
+    padding: 0;
+    
+    &.block-contacts__info--contact {
+        font-weight: 400;
+    }
+}
+
+.block-contacts__info dd a {
+    color: #1647ED;
+    text-decoration: none;
+    transition: color 0.1s ease-in;
+    cursor: pointer;
+    
+    &:hover {
+        color: darken(#1647ED, 20%);
+    }
+}
+

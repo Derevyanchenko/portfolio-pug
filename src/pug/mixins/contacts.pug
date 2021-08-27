@@ -1,0 +1,7 @@
+mixin contacts(communicationMethod, contact, link)
+    dl
+        dt #{communicationMethod}:
+        if link
+            dd.block-contacts__info--contact #[a(href= link) #{contact}]
+        else
+            dd.block-contacts__info--contact #{contact}

@@ -1,0 +1,51 @@
+.block-upload {
+    font-family: "Montserrat", sans-serif;
+}
+
+.block-upload__img {
+    margin-top: 10px;
+}
+
+.block-upload__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: auto;
+    color: #000000;
+}
+
+.block-upload__description p {
+    font-size: 16px;
+    line-height: auto;
+    color: #000000;
+}
+
+.block-upload__file-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.block-upload__file-name {
+    margin-left: 15px;
+}
+
+.block-upload__img {
+    position: relative;
+    margin-top: 10px;
+    width: 240px;
+}
+
+.block-upload__img img {
+    display: block;
+    width: 240px;
+    height: 120px;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.block-downloads__delete {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+}

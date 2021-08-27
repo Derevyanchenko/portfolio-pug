@@ -1,0 +1,47 @@
+$card-project-bgc: #FFFFFF;
+$card-project-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+$technology-bgc: #000000;
+$technology-color: #FFFFFF;
+$title-color: #000000;
+
+.card-project {
+    padding: 20px 20px 30px 20px;
+    max-width: 540px;
+    background-color: $card-project-bgc;
+    box-shadow: $card-project-shadow;
+}
+
+.card-project__img-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}   
+
+.card-project__technology {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background-color: $technology-bgc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: $technology-color;
+    text-transform: uppercase;
+} 
+
+.card-project__title {
+    margin: 0;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: $title-color;
+
+    a,
+    a:hover {
+        color: $title-color;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,47 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Пост';
+    - var pageClass= "";
+    - var pageLink = "blog.html"
+
+block content
+    //- Админ панель
+    include ./../sections/admin-panel.pug
+    //- Шапка
+    +section-header("inner", pageLink)
+    main.page-post
+        //- Пост
+        section.page-post__post
+            include ./../sections/section-posts.pug
+            .page-post__post-pagination
+                +post-pagination-button()
+        //- Комментарии             
+        section.page-post__comments
+            .page-post__title
+                +heading("2 комментария")
+            .page-post__comments-comment
+                +comment('Джон До', '05 мая 2017 года 15:45', './../img/avatars/comment-avatars.png', '#')
+                    p Замечательный парк, обязательно отправлюсь туда этим летом.
+            .page-post__comments-comment
+                +comment('Джейн Смитт', '05 Мая 2017 года в 15:45', './../img/avatars/comment-avatar-02.jpg', '#')
+                    p Замечательный парк, обязательно отправлюсь туда этим летом.
+        //- Оставить комментарий      
+        section.page-post__post-comments
+            .page-post__title
+                +heading("Оставить комментарий")
+            .page-post__comments-post-comment
+                include ./../sections/post-comment.pug
+        //- Смотрите также   
+        section.page-post__see-also
+            .container
+                .page-post__title
+                    +heading("Смотрите также")
+                .row                    
+                    each post, index in jsonData.blogPosts
+                        if index > (jsonData.blogPosts.length - 4)
+                            .col-4                            
+                                +card-post(post.title, post.img)                                
+    //-Подвал      
+    include ./../sections/section-footer.pug

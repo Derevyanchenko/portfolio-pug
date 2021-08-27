@@ -1,0 +1,40 @@
+.input {
+    padding: 10px 14px;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #7E9BBD;
+    border-radius: 6px;
+    outline: none;
+
+    &:focus {
+        border-color: rgb(77, 144, 254); 
+    }
+
+    &::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.5);              
+    }
+}
+
+.input--width-label {
+    padding: 10px 22px;
+}
+
+.input__label {
+    display: block;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;    
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+
+    & > .input {
+        
+        &:first-child {
+            margin-top: 10px;
+        }
+    }
+}

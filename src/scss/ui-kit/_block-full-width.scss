@@ -1,0 +1,11 @@
+.block-full-width {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.block-full-width > * {
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}

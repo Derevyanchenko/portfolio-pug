@@ -1,0 +1,23 @@
+// Vars
+@import "./vars/variables";
+
+// Libs
+@import "./libs/bootstrap-reboot.min.scss";
+@import "./libs/bootstrap-grid.min.scss";
+
+// Base
+@import "./base/base";
+@import "./base/remove-mobile-support";
+
+// UI-KIT
+@import "./ui-kit/**/*.scss";
+
+// Blocks, sections, layouts
+@import "./blocks/**/*.scss";
+
+// Utils
+@import "./utils/utils";
+
+// Notes
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Playfair Display', sans-serif;

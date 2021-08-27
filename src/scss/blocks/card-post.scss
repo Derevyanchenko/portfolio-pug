@@ -1,0 +1,29 @@
+.card-post {
+    padding: 30px 30px 40px;
+    max-width: 350px;
+    height: 409px;
+    background: #ffffff;
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+}
+
+.card-post__img {
+    margin-bottom: 20px;
+    a {
+    }
+}
+
+.card-post__title {
+    margin: 0;
+    font-family: "Playfair Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #000000;
+
+    a,
+    a:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+}

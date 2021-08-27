@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Заголовки';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Заголовки
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +heading("Новые записи в ", "блоге")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +heading("Новые записи в ", "блоге")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/heading.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin heading(text, linkText, link="#", tag="h2")
+                \#{tag}.heading \#{text}
+                    if linkText
+                        a(href= link) \#{linkText}

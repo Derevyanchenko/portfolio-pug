@@ -1,0 +1,66 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Форма авторизации';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Форма авторизации
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo.ui-kit__component-demo--dark-bg        
+            +authorization-form("enter", linkForgotPassword = "#", linkReg = "#")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +authorization-form("enter", linkForgotPassword = "#", linkReg = "#")
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo.ui-kit__component-demo--dark-bg        
+            +authorization-form("reg", linkEnter = "#")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +authorization-form("reg", linkEnter = "#")
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/authorization-form.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin authorization-form(type, linkForgotPassword, linkReg, linkEnter)
+                if type == "enter"
+                    form.authorization-form&attributes(attributes)
+                        .authorization-form__heading
+                            +heading("Вход на сайт")
+                        .authorization-form__input
+                            +input("Email")
+                        .authorization-form__input
+                            +input("Пароль")(type="password")
+                        .authorization-form__button
+                            +primary-button("Вход на сайт")
+                        .authorization-form__links
+                            a(href= linkForgotPassword) Забыл пароль
+                            a(href= linkReg) Регистрация
+                else if type == "reg"
+                    form.authorization-form&attributes(attributes)
+                        .authorization-form__heading
+                            +heading("Регистрация")
+                        .authorization-form__input
+                            +input("Email")
+                        .authorization-form__input
+                            +input("Пароль")(type="password")
+                        .authorization-form__button
+                            +primary-button("Зарегистрироваться")
+                        .authorization-form__links
+                            a(href= linkEnter) Вход на сайт

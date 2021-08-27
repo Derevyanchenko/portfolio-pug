@@ -1,0 +1,13 @@
+.section-admin-post  {
+    max-width: 900px;      
+    background: #FFFFFF;
+    padding: 20px 30px 34px 30px;
+}  
+   
+.section-admin-post__wrapper  {
+    margin-bottom: 30px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

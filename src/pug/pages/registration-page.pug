@@ -1,0 +1,9 @@
+extends ../layouts/authorization-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Регистрация';
+    - var pageClass= "authorization-page";
+
+block content
+    +authorization-form("reg", linkEnter = "#")

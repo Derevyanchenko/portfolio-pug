@@ -1,0 +1,4 @@
+mixin heading(text, linkText, link="#", tag="h2")
+    #{tag}.heading #{text}
+        if linkText
+            a(href= link) #{linkText}

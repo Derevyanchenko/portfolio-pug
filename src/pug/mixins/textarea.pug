@@ -1,0 +1,6 @@
+mixin textarea(placeholder, label)
+    if label
+        label.textarea__label #{label}
+            textarea.textarea.textarea--width-label(placeholder= placeholder)&attributes(attributes)
+    else
+        textarea.textarea(placeholder= placeholder)&attributes(attributes)

@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Войдите или зарегистрируйтесь';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Войдите или зарегистрируйтесь
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            +enter-or-reg()
+                
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +enter-or-reg()
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/enter-or-reg.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin enter-or-reg(linkEnter="#", linkReg="#")
+                .enter-or-reg 
+                    .enter-or-reg__text \#[a(href= linkEnter) Войдите] или \#[a(href= linkReg) зарегистрируйтесь] чтобы оставить комментарий.

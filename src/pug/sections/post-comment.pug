@@ -1,0 +1,8 @@
+.post-comment            
+    .post-comment__avatar
+        +avatar-small("./../img/avatars/avatar-comment.png")
+    form.post-comment__form
+        .post-comment__form-textarea
+            +textarea("Введите ваш комментарий...")
+        .post-comment__form-button
+            +primary-button("Комментировать")

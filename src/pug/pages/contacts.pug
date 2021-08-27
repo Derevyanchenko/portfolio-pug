@@ -1,0 +1,27 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Контакты';
+    - var pageClass= "";
+    - var pageLink = "contacts.html"
+
+block content
+    //- Шапка
+    +section-header("inner", pageLink)
+    main.page-contacts
+        //- Блок обо мне
+        include ./../sections/section-about-contacts.pug
+        //- Секция обратной связи
+        section.page-contacts__feedback
+            .container
+                .row
+                    .col-6
+                        include ./../sections/block-contacts.pug
+                    .col-6
+                        include ./../sections/feedback-form.pug
+        //- Карта
+        .page-contacts__map
+            img(src="../img/contacts/map.jpg", alt="map")
+    //-Подвал      
+    include ./../sections/section-footer.pug

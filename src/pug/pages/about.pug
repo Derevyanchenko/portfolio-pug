@@ -1,0 +1,20 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Обо мне';
+    - var pageClass= "";
+    - var pageLink = "about.html"
+
+block content
+    +section-header("inner", pageLink)
+    main.page-about
+        include ./../sections/section-about.pug
+        .page-about__section-skills
+            include ./../sections/section-skills.pug
+        include ./../sections/section-timeline.pug
+        .container
+            include ./../sections/section-status.pug
+
+        //-Подвал      
+    include ./../sections/section-footer.pug

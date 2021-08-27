@@ -1,0 +1,90 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Нотификации';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Нотификации
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            +notifications("Сообщение о действии")
+            +notifications("Сообщение об ошибке", "error")
+            +notifications("Сообщение об успехе", "success")
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +notifications("Сообщение о действии")
+
+            +notifications("Сообщение об ошибке", "error")
+
+            +notifications("Сообщение об успехе", "success")
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Нотификации с контентом
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        .block-full-width
+            +notifications("Сообщение о действии")
+                p  Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant.
+                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            +notifications("Сообщение об ошибке", "error")
+                p  Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant.
+                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            +notifications("Сообщение об успехе", "success")
+                p  Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant.
+                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+    
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +notifications("Сообщение о действии")
+                p  Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant.
+                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            
+            +notifications("Сообщение об ошибке", "error")
+                p  Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant.
+                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+            
+            +notifications("Сообщение об успехе", "success")
+                p  Здесь будет текст ошибки. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur in eget turpis sit maecenas in diam scelerisque habitant.
+                p Возможно на 2 абзаца. Turpis rhoncus, sed imperdiet sodales suspendisse eget. Viverra tortor id vitae venenatis non cras in maecenas tincidunt. Quam quisque cras faucibus quisque amet.
+    
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/notifications.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin notifications(title, notifications)
+                //- Проверяем тип нотификации и определяем нужный класс
+                if (notifications == "error")
+                    - var typeNotifications = "notifications__title--error"
+                else if  (notifications == "success")
+                    - var typeNotifications = "notifications__title--success"
+                else
+                    - var typeNotifications = ""
+                //- Проверяем на вложенность блока и убираем скругление углов дополнительным классом
+                if block
+                    - var additionalClass = "notifications__title--with-message"
+                else
+                    - var additionalClass = ""
+                //- Создаем разметку
+                .notifications(class=additionalClass)
+                    .notifications__title(class= typeNotifications) \#{title}
+                    //- Если есть вложенный блок, создаем разметку
+                    if block
+                        .notifications__message
+                            block

@@ -1,0 +1,23 @@
+extends ../layouts/page-layout.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Портфолио';
+    - var pageClass= "";
+    - var pageLink = "portfolio.html"
+
+block content
+    +section-header("inner", pageLink)
+    main.page-portfolio
+        .container
+            .page-portfolio__header
+                +heading("Портфолио")
+            //-Карточки с проектами
+            .page-portfolio__cards
+                each card in jsonData.portfolioCards
+                    +card-project(card.title, card.img, card.tags)
+            //-Пагинация
+            .page-portfolio__pagination
+                include ./../sections/section-pagination.pug
+        //-Подвал      
+    include ./../sections/section-footer.pug

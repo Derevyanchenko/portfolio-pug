@@ -1,0 +1,12 @@
+form.feedback-form
+    .feedback-form__heading
+        +heading("Напишите мне")
+    .feedback-form__input
+        +input("Ваше имя")
+    .feedback-form__input
+        +input("Email")
+    .feedback-form__input    
+        +textarea("Введите сообщение")
+    .feedback-form__upload
+        +block-upload('Прикрепить файл:', 'jpg, png, pdf, вес до 2 Мб')
+    +primary-button()

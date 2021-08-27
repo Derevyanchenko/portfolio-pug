@@ -1,0 +1,35 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Блок навыков';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Блок навыков
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +block-item-skills('./../img/block-item-scills/ui.svg', 'UI/UX design')
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +block-item-skills('./../img/block-item-scills/ui.svg', 'UI/UX design')
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/block-item-skills.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin block-item-skills(FilePath, title)
+                .block-item-skills        
+                    img.block-item-skills__img(src= FilePath alt="Изображение навыка")      
+                    h4.block-item-skills__title  \#{title}

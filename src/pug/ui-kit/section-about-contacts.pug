@@ -1,0 +1,37 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция обо мне в контактах';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция обо мне в контактах
+
+    //- Демонстрация компонента
+    include ./../sections/section-about-contacts.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-about-contacts.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-about-contacts.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .section-about-contacts
+                .container
+                    .row         
+                        .section-about-contacts__content
+                            +post-about-me('обо мне')
+                                p Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты. Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. Чуть позже я обновлю в нём свой контент. А пока посмотрите, как тут всё классно!              
+                        +post-about-skills('направления, которыми я занимаюсь')     

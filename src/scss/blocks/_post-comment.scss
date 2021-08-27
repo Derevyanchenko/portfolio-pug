@@ -1,0 +1,18 @@
+.post-comment {
+    padding: 20px;
+    display: flex;
+    background: #EAEFF2;
+    border-radius: 8px;
+}
+
+.post-comment__avatar {
+    margin-right: 20px;
+}
+
+.post-comment__form {
+    width: 100%;
+}
+
+.post-comment__form-textarea {
+    margin-bottom: 15px;
+}

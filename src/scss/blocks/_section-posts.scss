@@ -1,0 +1,48 @@
+.section-posts {
+ margin-bottom: 40px;
+}
+
+.section-posts__title {
+margin-bottom: 20px;
+text-align: center; 
+
+}
+
+.section-posts__info {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #687492;
+    margin-bottom: 40px;
+}
+.section-posts__img {
+    margin: 0 auto;
+    width: 1110px;
+    height: 458px;
+    object-fit: cover;
+    box-shadow: 0px 10px 40px rgba(126, 155, 189, 0.3);
+    margin-bottom: 40px;
+}
+
+.section-posts__img img {
+    width: 1110px;
+    height: 458px;
+}
+
+.section-posts__content {
+    width: 920px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.75;
+}
+
+.section-posts__content p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

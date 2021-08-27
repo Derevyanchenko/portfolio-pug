@@ -1,0 +1,37 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Навыки
+
+    //- Демонстрация компонента
+    .ui-kit__component-demo
+        +post-about-skills()
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            +post-about-skills()
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        mixins/post-about-skills.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            mixin post-about-skills( title='чем могу быть полезен')
+                .post-about-skills        
+                    h4.post-about-skills__title \#{title}
+                    ul.skills__list
+                        each skill in ['Верстка сайтов', 'Frontend' ,'UI/UX дизайн']
+                            li.skills__list-item \#{skill}

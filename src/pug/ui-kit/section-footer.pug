@@ -1,0 +1,43 @@
+extends ./layout/ui-layout.pug
+include ./mixins/*.pug
+include ./../mixins/*.pug
+
+block variables
+    - var title = 'Секция footer';
+    - var pageClass = 'body--dashboard';
+
+block content
+
+    //- Заголовок компонента
+    h1.ui-kit__component-title.
+        Секция footer
+
+    //- Демонстрация компонента
+    include ./../sections/section-footer.pug
+
+    //- Код для вызова компонента
+    .ui-kit__component-code
+        pre.
+            include ./../sections/section-footer.pug
+
+    //- Файл в котором описан компонент
+    .ui-kit__element-title.
+        Название файла:
+        sections/section-footer.pug
+
+    //- Распечатка кода компонента
+    .ui-kit__element-code
+        pre.
+            .section-footer
+                .container
+                    .row
+                        .col.section-footer__copyright
+                            p © Юрий Ключевский
+                            p Создано в WebCademy.ru в 2020 году.
+                        .col.section-social-icons
+                            +footer-icons("./../img/favicons/youtube-brands.svg", "Youtube", 30, 21, "#")
+                            +footer-icons("./../img/favicons/instagram.svg", "instagram", 24, 26, "#")
+                            +footer-icons("./../img/favicons/facebook.svg", "facebook", 18, 28, "#")
+                            +footer-icons("./../img/favicons/vk.svg", "vk", 30, 18, "#")
+                            +footer-icons("./../img/favicons/linkedin.svg", "linkedin", 25, 28, "#")
+                            +footer-icons("./../img/favicons/github-brands.svg", "github-brands", 27, 28, "#")              
