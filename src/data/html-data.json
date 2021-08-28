@@ -17,27 +17,31 @@
     "socialLinks": [
         {
             "name": "telegram",
+            "text": "@danil2707",
             "link": "https://t.me/danil2707",
             "icon": "./img/icons/telegram-icon.svg",
             "showInHeader": "true"
         },
         {
             "name": "viber",
+            "text": "+38 066 447 5285",
             "link": "viber://chat?number=380634475285",
             "icon": "./img/icons/viber-icon.svg",
             "showInHeader": "true"
         },
         {
             "name": "gmail",
+            "text": "danilderevyanchenko@gmail.com",
             "link": "mailto:danilderevyanchenko@gmail.com",
             "icon": "./img/icons/gmail-icon.svg",
             "showInHeader": "false"
         }
     ],
+    "projectCategories": ["WordPress", "HTML-Верстка"],
     "projects": [
         {
             "title": "“Томт”",
-            "categories": ["Wordpress"],
+            "categories": ["WordPress"],
             "image": "/img/portfolio/portfolio-img-tomt.png",
             "content": [
                 "Тип сайта .......................................Многостраничный",
@@ -49,7 +53,7 @@
         },
         {
             "title": "“Pozitiv life”",
-            "categories": ["Wordpress", "HTML-Верстка"],
+            "categories": ["WordPress", "HTML-Верстка"],
             "image": "/img/portfolio/portfolio-img-pozitiv.png",
             "content": [
                 "Тип сайта ..................................................................Блог",
@@ -61,7 +65,7 @@
         },
         {
             "title": "“Чистый дом”",
-            "categories": ["Wordpress", "HTML-Верстка"],
+            "categories": ["WordPress", "HTML-Верстка"],
             "image": "/img/portfolio/portfolio-img-cleaning.png",
             "content": [
                 "Тип сайта ......................................Многостраничный",
@@ -112,16 +116,26 @@
                "- Разработка Wordpress плагинов",
                "- Разработка WooCommerce тем (базовые навыки)",
                "- Разработка собственных блоков для Gutenberg ",
-               "- Разработка собственных виджетов для Elementor Pagе Builder",
-               "- Плагины: ACF, CPT, WooCommerce, Elementor, Polylang, CF7"
+               "- Плагины: ACF, CPT, WooCommerce, Polylang, Contact Form 7"
             ]
         }
     ],
+    "skillsIcons": [
+        "./img/skills/pug.svg",
+        "./img/skills/sass.svg",
+        "./img/skills/es6.svg",
+        "./img/skills/gulp.svg",
+        "./img/skills/github.svg",
+        "./img/skills/wordpress.svg",
+        "./img/skills/woocommerce.svg",
+        "./img/skills/elementor.svg",
+        "./img/skills/acf.svg"
+    ],
     "reviews": [
-        {"img": "./img/reviews/review-img-1.png"},
-        {"img": "./img/reviews/review-img-1.png"},
-        {"img": "./img/reviews/review-img-1.png"},
-        {"img": "./img/reviews/review-img-1.png"}
+        "./img/reviews/review-img-1.png",
+        "./img/reviews/review-img-1.png",
+        "./img/reviews/review-img-1.png",
+        "./img/reviews/review-img-1.png"
     ],
     "copyright": "Danil Derevyanchenko © 2018-2021 All Rights Reserved."
 }

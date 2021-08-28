@@ -93,3 +93,43 @@
         background: $viloet-gradiend;
     }
 }
+
+// ##########################################################################
+// media queries
+
+@media (max-width: 1199.99px) {
+
+    .menu__link {
+        font-size: 14px;
+    }
+
+    .menu__item:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .header__number {
+        font-size: 14px;
+        margin-right: 20px;
+    }
+
+    .logo p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 990.99px) {
+    .header__wrapper .header__menu {
+        display: none;
+    }
+}
+
+@media (max-width: 767.99px) {
+    .header__right {
+        display: none;
+    }
+
+    .header {
+        padding: 20px 0;
+    }
+}

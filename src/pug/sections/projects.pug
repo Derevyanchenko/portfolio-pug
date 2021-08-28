@@ -1,6 +1,36 @@
 .projects 
     .container
-        .row
-            each project in jsonData.projects
-                .col-lg-10.offset-lg-1
-                    +project-item(project.title, project.categories, project.image, project.content, project.link, project.show)
+        h2.section__title Несколько моих последних работ
+        p.section__text 
+            | Выберите нужную категорию работ ниже, чтобы посмотреть проекты с описанием
+
+        .project__grid.tabs 
+            ul.categories-tab
+                each cat in jsonData.projectCategories
+                    +project-category(cat)
+
+            .projects__wrapper
+                each cat in jsonData.projectCategories
+                    .project__categories-item
+                        .row
+                            each project in jsonData.projects
+                                if project.categories.includes(cat)
+                                    .col-xl-10.col-lg-12.offset-xl-1.offset-lg-0
+                                        +project-item(
+                                            project.title, 
+                                            project.categories, 
+                                            project.image, 
+                                            project.content, 
+                                            project.link, 
+                                            project.show
+                                        )
+                                else if project.categories.includes(cat)
+                                    .col-xl-10.col-lg-12.offset-xl-1.offset-lg-0
+                                        +project-item(
+                                            project.title, 
+                                            project.categories, 
+                                            project.image, 
+                                            project.content, 
+                                            project.link, 
+                                            project.show
+                                        )

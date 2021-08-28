@@ -1,0 +1,23 @@
+.reviews {
+    @include margin-top-section;
+}
+
+.reviews__wrapper {
+    @include margin-top-wrapper;
+}
+
+.reviews__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+        max-width: 100%;
+    }
+}
+
+// ##############################################
+// media queries
+@media (max-width: 1199.99px) {
+
+}

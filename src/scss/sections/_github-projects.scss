@@ -1,0 +1,57 @@
+.github {
+    @include margin-top-section;
+}
+
+.github__wrapper {
+    @include margin-top-wrapper;
+    
+    .col-lg-6 {
+        margin-bottom: 30px;
+        &:last-child,
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// ##############################################
+// media queries
+@media (max-width: 990.99px) {
+
+    
+    .github__item {
+        padding: 25px;
+    }
+
+    .github__item-title {
+        margin-bottom: 20px;
+    }
+
+    .github__item-text {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 150%;
+        min-height: 42px;
+    }
+
+    .github__item a {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+}
+
+@media (max-width: 767.99px) {
+
+    .github__wrapper {
+        .col-lg-6 {
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &:nth-last-child(2) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}

@@ -1,2 +1,24 @@
-header 
-    h1 header
+section.skills#skills 
+    .container 
+        h2.section__title Мои навыки
+        .skills__wrapper
+            .row
+                .col-lg-1.ghost-col 
+                .col-xl-5.col-lg-6 
+                    .skills__content
+                        each skills in jsonData.skills
+                            .skills__cat
+                                h4 #{skills.category}
+                                each content in skills.content 
+                                    p 
+                                        | #{content}
+                     
+
+                .col-xl-5.col-lg-6
+                    .skills__icons-contaner
+                        .skills__icons
+                            each icon in jsonData.skillsIcons
+                                .skills__icon 
+                                    img(src=icon, alt="icon")
+
+                .col-lg-1.ghost-col 

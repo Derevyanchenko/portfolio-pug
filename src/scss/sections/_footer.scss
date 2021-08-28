@@ -1,0 +1,135 @@
+.footer {
+    @include margin-top-section;
+    border-top: 2px solid #DDDCDC;
+    padding: 40px 0;
+}
+
+.footer__wrapper {
+
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+a.footer__social {
+    display: flex;
+    align-items: center;
+    margin: 0 25px;
+    .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+    }
+
+    &:first-child {
+        .icon {
+            background: linear-gradient(180deg, #29DEFF 0%, #02A5C2 100%);
+        }
+        
+    }
+    &:nth-child(2) {
+        .icon {
+            background: linear-gradient(180deg, #DCBAFB 0%, #8C4AC6 100%);
+        }
+    }
+    
+    span.text {
+        font-family: $bold-font;
+        font-size: 14px;
+    }
+}
+
+p.footer__copy {
+    font-size: 14px;
+    text-align: center;
+}
+
+// ##############################################
+// media queries
+
+@media (max-width: 990.99px) {
+
+    a.footer__social span.text {
+        font-size: 13px;
+    }
+
+    a.footer__social .icon {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        margin-right: 12px;
+    }
+
+    a.footer__social {
+        margin-left: 0;
+        margin-right: 0;
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:first-child {
+            img {
+                max-width: 14px;
+                margin-bottom: -2px;
+            }
+        }
+        &:nth-child(2) {
+            img {
+                max-width: 12px;
+                margin-bottom: -2px;
+            }
+        }
+        &:last-child {
+            img {
+                max-width: 30px;
+            }
+        }
+    }
+
+    .footer__socials {
+        justify-content: space-between;
+    }
+
+}
+
+@media (max-width: 767.99px) {
+
+    .footer__socials {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+
+    a.footer__social {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .footer {
+        padding: 25px 0;
+    }
+
+    p.footer__copy {
+        font-size: 12px;
+    }
+
+    a.footer__social span.text {
+        font-size: 12px;
+    }
+
+}
+

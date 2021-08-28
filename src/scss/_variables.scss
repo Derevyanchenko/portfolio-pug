@@ -12,3 +12,31 @@ $viloet-gradiend: linear-gradient(182.8deg, #B0A4FF 8.67%, #806EF8 97.93%);
 // fonts
 
 $bold-font: 'Stolzl Display';
+
+
+@mixin margin-top-section {
+    margin-top: 155px;
+
+    @media (max-width: 990.99px) {
+        margin-top: 100px;
+    }
+
+    @media (max-width: 767.99px) {
+        margin-top: 85px;
+    }
+}
+// @include margin-top-section;
+
+@mixin margin-top-wrapper {
+    margin-top: 80px;
+
+    @media (max-width: 990.99px) {
+        margin-top: 60px;
+    }
+
+    @media (max-width: 767.99px) {
+        margin-top: 40px;
+    }
+}
+
+// @include margin-top-wrapper

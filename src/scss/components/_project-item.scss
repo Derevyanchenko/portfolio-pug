@@ -1,6 +1,7 @@
 // project item
 
-.project__item {
+
+.project__categories-item .col-xl-10:not(:last-child) .project__item {
     margin-bottom: 50px;
 }
 
@@ -59,4 +60,58 @@
 
 .project__btn {
     margin-top: 45px;
+}
+
+@media (max-width: 990.99px) {
+
+    .project__title {
+        margin-bottom: 16px;
+    }
+
+    .project__categories {
+        margin-bottom: 25px;
+    }
+
+    .project__cat {
+        padding: 8px 26px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .project__content p:not(:last-child) {
+        margin-bottom: 12px;
+    }
+
+    .project__content p {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    .project__btn {
+        margin-top: 30px;
+    }
+
+
+}
+
+@media (max-width: 767.99px){
+
+    .project__item {
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project__title {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 359.98px){
+
+    .project__content p {
+        font-size: 12px;
+    }
+
 }

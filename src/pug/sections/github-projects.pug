@@ -1,2 +1,15 @@
-header 
-    h1 header
+.github#github 
+    .container
+        h2.section__title Github репозитории
+        p.section__text 
+            | Ниже вы можете ознакомиться с моим кодом на разных типах проектов
+        
+        .github__wrapper
+            .row
+                each item in jsonData.githubRepos
+                    .col-lg-6.col-md-6
+                        +github-item(
+                            item.title,
+                            item.content,
+                            item.link
+                        )

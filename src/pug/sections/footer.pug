@@ -1,2 +1,11 @@
-header 
-    h1 header
+footer.footer
+    .container
+        .footer__wrapper
+            .footer__socials
+                each social in jsonData.socialLinks
+                    a.footer__social(href=social.link)
+                        .icon
+                            img(src=social.icon, alt="")
+                        span.text #{social.text}
+
+            p.footer__copy #{jsonData.copyright}

@@ -23,6 +23,7 @@
     position: absolute;
     left: -9px;
     top: 50%;
+    transform: translateY(-50%);
     img {
         max-width: 100%;
     }
@@ -39,7 +40,9 @@
 .main__item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    &:not(:last-child) {
+        margin-bottom: 18px;
+    }
 
     .icon {
         width: 24px;
@@ -57,11 +60,155 @@
 
     p {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 16px;
         line-height: 1.4;
     }
 }
 
 .main__btn {
     margin-top: 55px;
+}
+
+
+// ##########################################################################
+// media queries
+
+@media (max-width: 1599.99px) {
+
+    .main__decoration {
+        max-width: 12%;
+        position: absolute;
+        left: -38px;
+        top: 50%;
+    }
+
+}
+
+
+@media (max-width: 1439.99px) {
+
+    .main__decoration {
+        max-width: 10%;
+        position: absolute;
+        left: -9px;
+        top: 10%;
+    }
+
+    h1 {
+        font-size: 44px;
+        line-height: 120%;
+        margin-bottom: 50px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+
+    .main__decoration {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1199.99px) {
+
+    h1 {
+        font-size: 40px;
+        margin-bottom: 45px;
+    }
+
+    .main {
+        padding-top: 65px;
+        padding-bottom: 65px;
+        position: relative;
+        margin-bottom: 65px;
+    }
+
+    .main__btn {
+        margin-top: 45px;
+    }
+
+    .btn-lg {
+        padding: 22px 45px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .main__img {
+        max-width: 43%;
+    }
+
+}
+
+@media (max-width: 990.99px) {
+
+    .main {
+        padding-top: 45px;
+        padding-bottom: 55px;
+        margin-bottom: 0;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .main__item p {
+        font-size: 14px;
+    }
+
+    .main__item .icon {
+        flex-shrink: 0;
+        width: 16px;
+        height: 16px;
+        margin-right: 15px;
+        img {
+            width: 8px;
+            margin-bottom: -2px;
+        }
+    }
+
+    .main__item:not(:last-child) {
+        margin-bottom: 13px;
+    }
+
+    .main__btn {
+        margin-top: 30px;
+    }
+
+    .btn-lg {
+        padding: 22px 34px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .main__img {
+        display: none;
+    }
+
+    .main__img--mob {
+        margin-top: 35px;
+        display: block;
+        img {
+            max-width: 100%;
+            text-align: right;
+        }
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    h1 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 344.99px) {
+
+    h1 {
+        font-size: 23px;
+    }
+
 }
