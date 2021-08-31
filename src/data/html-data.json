@@ -42,7 +42,7 @@
         {
             "title": "“Томт”",
             "categories": ["WordPress"],
-            "image": "/img/portfolio/portfolio-img-tomt.png",
+            "image": "./img/portfolio/portfolio-img-tomt.png",
             "content": [
                 "Тип сайта .......................................Многостраничный",
                 "Кол-во уник. страниц ...................................... 10 стр.",
@@ -54,7 +54,7 @@
         {
             "title": "“Pozitiv life”",
             "categories": ["WordPress", "HTML-Верстка"],
-            "image": "/img/portfolio/portfolio-img-pozitiv.png",
+            "image": "./img/portfolio/portfolio-img-pozitiv.png",
             "content": [
                 "Тип сайта ..................................................................Блог",
                 "Кол-во уник. страниц ........................................ 6 стр.",
@@ -66,7 +66,7 @@
         {
             "title": "“Чистый дом”",
             "categories": ["WordPress", "HTML-Верстка"],
-            "image": "/img/portfolio/portfolio-img-cleaning.png",
+            "image": "./img/portfolio/portfolio-img-cleaning.png",
             "content": [
                 "Тип сайта ......................................Многостраничный",
                 "Кол-во уник. страниц ...................................... 10 стр.",
