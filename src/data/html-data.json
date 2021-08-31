@@ -128,8 +128,8 @@
         "./img/skills/github.svg",
         "./img/skills/wordpress.svg",
         "./img/skills/woocommerce.svg",
-        "./img/skills/elementor.svg",
-        "./img/skills/acf.svg"
+        "./img/skills/acf.svg",
+        "./img/skills/contact-form.svg"
     ],
     "reviews": [
         "./img/reviews/review-img-1.png",

@@ -1,3 +1,17 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Stolzl Display';
+    src: url('./fonts/StolzlDisplay-Regular.eot');
+    src: local('Stolzl Display Regular'), local('StolzlDisplay-Regular'),
+        url('./fonts/StolzlDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/StolzlDisplay-Regular.woff2') format('woff2'),
+        url('./fonts/StolzlDisplay-Regular.woff') format('woff'),
+        url('./fonts/StolzlDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Stolzl Display';
     src: url('./fonts/StolzlDisplay-Medium.eot');
