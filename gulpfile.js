@@ -75,6 +75,12 @@ gulp.task("copy:img", function(callback) {
     callback();
 });
 
+// Копирование Шрифтов
+gulp.task("copy:fonts", function(callback) {
+    return gulp.src("./src/fonts/**/*.*").pipe(gulp.dest("./build/fonts/"));
+    callback();
+});
+
 // Копирование Скриптов
 gulp.task("copy:js", function(callback) {
     return gulp.src("./src/js/**/*.*").pipe(gulp.dest("./build/js/"));
@@ -85,7 +91,7 @@ gulp.task("copy:js", function(callback) {
 gulp.task("watch", function() {
     // Следим за картинками и скриптами и обновляем браузер
     watch(
-        ["./build/js/**/*.*", "./build/img/**/*.*"],
+        ["./build/js/**/*.*", "./build/img/**/*.*", "./build/fonts/**/*.*"],
         gulp.parallel(browserSync.reload)
     );
 
@@ -99,6 +105,7 @@ gulp.task("watch", function() {
 
     // Следим за картинками и скриптами, и копируем их в build
     watch("./src/img/**/*.*", gulp.parallel("copy:img"));
+    watch("./src/fonts/**/*.*", gulp.parallel("copy:fonts"));
     watch("./src/js/**/*.*", gulp.parallel("copy:js"));
 });
 
@@ -121,7 +128,7 @@ gulp.task(
     "default",
     gulp.series(
         gulp.parallel("clean:build"),
-        gulp.parallel("scss", "pug", "copy:img", "copy:js"),
+        gulp.parallel("scss", "pug", "copy:img", "copy:fonts", "copy:js"),
         gulp.parallel("server", "watch")
     )
 );
