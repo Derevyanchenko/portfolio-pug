@@ -8,6 +8,22 @@
     <title>Portfolio</title>
   </head>
   <body>
+    <div class="mobileMenu-overlay">
+      <div class="mobileMenu">
+        <button class="mobileMenu__close">&times;</button>
+        <div class="mobileMenu__container">
+          <ul class="header__menu"> 
+            <li class="menu__item"> <a class="menu__link" href="#github">Github репозитории </a></li>
+            <li class="menu__item"> <a class="menu__link" href="#skills">Мои навыки </a></li>
+            <li class="menu__item"> <a class="menu__link" href="#reviews">Отзывы </a></li>
+          </ul>
+          <div class="header__right"><a class="header__number" href="tel:+380664475285">+38 066 447 5285</a>
+            <div class="header__socials"><a class="header__socials-item" href="https://t.me/danil2707"> <img src="./img/icons/telegram-icon.svg" alt=""/></a><a class="header__socials-item" href="viber://chat?number=380634475285"> <img src="./img/icons/viber-icon.svg" alt=""/></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
@@ -22,6 +38,9 @@
           <div class="header__right"><a class="header__number" href="tel:+380664475285">+38 066 447 5285</a>
             <div class="header__socials"><a class="header__socials-item" href="https://t.me/danil2707"> <img src="./img/icons/telegram-icon.svg" alt=""/></a><a class="header__socials-item" href="viber://chat?number=380634475285"> <img src="./img/icons/viber-icon.svg" alt=""/></a>
             </div>
+            <div class="burger open-menu-js">
+              <div class="open-menu"><span> </span><span> </span><span> </span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -32,8 +51,7 @@
       <div class="container">
         <div class="main__wrapper">
           <div class="main__content">
-            <h1 class="main__title">
-               FULLSTACK WORDPRESS <br>DEVELOPER</h1>
+            <h1 class="main__title glitch" data-text="FULLSTACK WORDPRESS">FULLSTACK WORDPRESS <br>DEVELOPER</h1>
             <div class="main__desc">
               <div class="main__item">
                 <div class="icon"> <img src="./img/icons/check.svg" alt=""/></div>
@@ -53,7 +71,7 @@
         </div>
       </div>
     </main>
-    <div class="projects"> 
+    <section class="projects" id="portfolio">
       <div class="container">
         <h2 class="section__title">Несколько моих последних работ</h2>
         <p class="section__text">
@@ -66,7 +84,7 @@
           <div class="projects__wrapper">
             <div class="project__categories-item">
               <div class="row">
-                <div class="col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
+                <div class="project__item__box col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
                   <div class="project__item">
                     <div class="row">
                       <div class="col-lg-7 col-md-6">
@@ -88,7 +106,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
+                <div class="project__item__box col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
                   <div class="project__item">
                     <div class="row">
                       <div class="col-lg-7 col-md-6">
@@ -111,7 +129,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
+                <div class="project__item__box col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
                   <div class="project__item">
                     <div class="row">
                       <div class="col-lg-7 col-md-6">
@@ -135,10 +153,13 @@
                   </div>
                 </div>
               </div>
+              <div class="text-center">
+                <button class="btn-show_more">Показать все работы</button>
+              </div>
             </div>
             <div class="project__categories-item">
               <div class="row">
-                <div class="col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
+                <div class="project__item__box col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
                   <div class="project__item">
                     <div class="row">
                       <div class="col-lg-7 col-md-6">
@@ -161,7 +182,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
+                <div class="project__item__box col-xl-10 col-lg-12 offset-xl-1 offset-lg-0">
                   <div class="project__item">
                     <div class="row">
                       <div class="col-lg-7 col-md-6">
@@ -184,13 +205,16 @@
                     </div>
                   </div>
                 </div>
+              </div>
+              <div class="text-center">
+                <button class="btn-show_more">Показать все работы</button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="github" id="github"> 
+    </section>
+    <section class="github" id="github"> 
       <div class="container">
         <h2 class="section__title">Github репозитории</h2>
         <p class="section__text">
@@ -224,7 +248,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
     <section class="skills" id="skills"> 
       <div class="container"> 
         <h2 class="section__title">Мои навыки</h2>
@@ -276,19 +300,21 @@
         <h2 class="section__title">Отзывы и рекомендации</h2>
         <div class="reviews__wrapper">
           <div class="row reviews__slider">
-            <div class="col-lg-3 reviews__slider-item">
+            <div class="col-xl-3 col-lg-4 reviews__slider-item">
               <div class="reviews__item"><img src="./img/reviews/review-img-1.png" alt=""/></div>
             </div>
-            <div class="col-lg-3 reviews__slider-item">
+            <div class="col-xl-3 col-lg-4 reviews__slider-item">
               <div class="reviews__item"><img src="./img/reviews/review-img-1.png" alt=""/></div>
             </div>
-            <div class="col-lg-3 reviews__slider-item">
+            <div class="col-xl-3 col-lg-4 reviews__slider-item">
               <div class="reviews__item"><img src="./img/reviews/review-img-1.png" alt=""/></div>
             </div>
-            <div class="col-lg-3 reviews__slider-item">
+            <div class="col-xl-3 col-lg-4 reviews__slider-item">
               <div class="reviews__item"><img src="./img/reviews/review-img-1.png" alt=""/></div>
             </div>
           </div>
+          <button class="banner-arrow banner-prev"><img src="img/arrow.svg" alt="prev"/></button>
+          <button class="banner-arrow banner-next"><img src="img/arrow.svg" alt="next"/></button>
         </div>
       </div>
     </section>
@@ -306,5 +332,6 @@
     </footer>
     <script src="js/jquery-3.0.0.min.js"> </script>
     <script src="js/main.js"></script>
+    <script src="js/slick.min.js"> </script>
   </body>
 </html>

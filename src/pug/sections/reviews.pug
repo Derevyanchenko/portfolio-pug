@@ -5,6 +5,11 @@ section.reviews#reviews
         .reviews__wrapper
             .row.reviews__slider
                 each img in jsonData.reviews
-                    .col-lg-3.reviews__slider-item
+                    .col-xl-3.col-lg-4.reviews__slider-item
                         .reviews__item
                             img(src=img, alt="")
+
+            button.banner-arrow.banner-prev
+                img(src="img/arrow.svg", alt="prev")
+            button.banner-arrow.banner-next
+                img(src="img/arrow.svg", alt="next")

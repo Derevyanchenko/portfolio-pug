@@ -1,3 +1,21 @@
+.mobileMenu-overlay
+    .mobileMenu
+        button.mobileMenu__close &times;
+        .mobileMenu__container
+            ul.header__menu 
+                each menuItem in jsonData.menu
+                    li.menu__item 
+                        a.menu__link(href=menuItem.link) #{menuItem.name} 
+            
+            .header__right
+                    a.header__number(href="tel:+380664475285") +38 066 447 5285
+                    .header__socials
+                        each social in jsonData.socialLinks
+                            if JSON.parse(social.showInHeader)
+                                a.header__socials-item(href=social.link) 
+                                    img(src=social.icon, alt="")
+
+
 header.header
     .container
         .header__wrapper
@@ -17,3 +35,9 @@ header.header
                         if JSON.parse(social.showInHeader)
                             a.header__socials-item(href=social.link) 
                                 img(src=social.icon, alt="")
+                
+                .burger.open-menu-js
+                    .open-menu
+                        span 
+                        span 
+                        span 

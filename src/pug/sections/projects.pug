@@ -1,4 +1,4 @@
-.projects 
+section.projects#portfolio
     .container
         h2.section__title Несколько моих последних работ
         p.section__text 
@@ -15,7 +15,7 @@
                         .row
                             each project in jsonData.projects
                                 if project.categories.includes(cat)
-                                    .col-xl-10.col-lg-12.offset-xl-1.offset-lg-0
+                                    .project__item__box.col-xl-10.col-lg-12.offset-xl-1.offset-lg-0
                                         +project-item(
                                             project.title, 
                                             project.categories, 
@@ -34,3 +34,6 @@
                                             project.link, 
                                             project.show
                                         )
+                        
+                        .text-center
+                            button.btn-show_more Показать все работы
