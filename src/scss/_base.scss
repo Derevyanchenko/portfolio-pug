@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: 'Stolzl Display';
+    font-family: "Stolzl Display";
     src: url('./fonts/StolzlDisplay-Regular.eot');
     src: local('Stolzl Display Regular'), local('StolzlDisplay-Regular'),
         url('./fonts/StolzlDisplay-Regular.eot?#iefix') format('embedded-opentype'),
@@ -13,7 +13,7 @@
 }
 
 @font-face {
-    font-family: 'Stolzl Display';
+    font-family: "Stolzl Display";
     src: url('./fonts/StolzlDisplay-Medium.eot');
     src: local('Stolzl Display Medium'), local('StolzlDisplay-Medium'),
         url('./fonts/StolzlDisplay-Medium.eot?#iefix') format('embedded-opentype'),
@@ -25,7 +25,7 @@
 }
 
 @font-face {
-    font-family: 'Stolzl Display';
+    font-family: "Stolzl Display";
     src: url('./fonts/StolzlDisplay-Bold.eot');
     src: local('Stolzl Display Bold'), local('StolzlDisplay-Bold'),
         url('./fonts/StolzlDisplay-Bold.eot?#iefix') format('embedded-opentype'),
@@ -87,7 +87,7 @@ a {
 
 // titles and text
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Stolzl Display';
+    font-family: "Stolzl Display";
 }
 
 h1 {
