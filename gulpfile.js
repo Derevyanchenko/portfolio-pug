@@ -114,7 +114,9 @@ gulp.task("server", function() {
     browserSync.init({
         server: {
             baseDir: "./build/"
-        }
+        },
+        online: true,
+        tunnel: true
     });
 });
 

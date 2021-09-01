@@ -11,8 +11,7 @@ $viloet-gradiend: linear-gradient(182.8deg, #B0A4FF 8.67%, #806EF8 97.93%);
 
 // fonts 
 
-$bold-font: 'Stolzl Display Medium';
-
+$bold-font: 'Stolzl Display', sans-serif;
 
 @mixin margin-top-section {
     margin-top: 155px;
