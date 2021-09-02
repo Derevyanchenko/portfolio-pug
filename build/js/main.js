@@ -37,15 +37,16 @@ function hideProjects(wrapper) {
           $(item).show();
           $showBtn = false;
       }
-      if (itemIndex >= 2) {
-          $showBtn = true;
-      }
+    //   if (itemIndex >= 2) {
+    //       $showBtn = true;
+    //   }
   });
   return $showBtn;
 }
 
 // #####################################################
 // ready
+
 $(document).ready(function() {
 
   $('.tabs').each(function() {

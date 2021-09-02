@@ -2,83 +2,50 @@
 
 @font-face {
     font-family: 'Stolzl Display';
-    src: url('fonts/StolzlDisplay-Regular.eot');
-    src: local('Stolzl Display Regular'), local('StolzlDisplay-Regular'),
-        url('fonts/StolzlDisplay-Regular.eot?#iefix') format('embedded-opentype'),
-        url('fonts/StolzlDisplay-Regular.woff2') format('woff2'),
-        url('fonts/StolzlDisplay-Regular.woff') format('woff'),
-        url('fonts/StolzlDisplay-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Stolzl Display';
-    src: url('fonts/StolzlDisplay-Medium.eot');
+    src: url('../fonts/StolzlDisplay-Medium.eot');
     src: local('Stolzl Display Medium'), local('StolzlDisplay-Medium'),
-        url('fonts/StolzlDisplay-Medium.eot?#iefix') format('embedded-opentype'),
-        url('fonts/StolzlDisplay-Medium.woff2') format('woff2'),
-        url('fonts/StolzlDisplay-Medium.woff') format('woff'),
-        url('fonts/StolzlDisplay-Medium.ttf') format('truetype');
+        url('../fonts/StolzlDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/StolzlDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/StolzlDisplay-Medium.woff') format('woff'),
+        url('../fonts/StolzlDisplay-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Stolzl Display';
-    src: url('fonts/StolzlDisplay-Bold.eot');
+    src: url('../fonts/StolzlDisplay-Bold.eot');
     src: local('Stolzl Display Bold'), local('StolzlDisplay-Bold'),
-        url('fonts/StolzlDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-        url('fonts/StolzlDisplay-Bold.woff2') format('woff2'),
-        url('fonts/StolzlDisplay-Bold.woff') format('woff'),
-        url('fonts/StolzlDisplay-Bold.ttf') format('truetype');
+        url('../fonts/StolzlDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/StolzlDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/StolzlDisplay-Bold.woff') format('woff'),
+        url('../fonts/StolzlDisplay-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/Gilroy-ExtraBold.eot');
-    src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
-        url('fonts/Gilroy-ExtraBold.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gilroy-ExtraBold.woff') format('woff'),
-        url('fonts/Gilroy-ExtraBold.ttf') format('truetype');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('fonts/Gilroy-SemiBold.eot');
-    src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
-        url('fonts/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gilroy-SemiBold.woff') format('woff'),
-        url('fonts/Gilroy-SemiBold.ttf') format('truetype');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Regular.eot');
+    src: url('../fonts/Gilroy-Regular.eot');
     src: local('Gilroy Regular'), local('Gilroy-Regular'),
-        url('fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gilroy-Regular.woff') format('woff'),
-        url('fonts/Gilroy-Regular.ttf') format('truetype');
+        url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Gilroy';
-    src: url('fonts/Gilroy-Medium.eot');
+    src: url('../fonts/Gilroy-Medium.eot');
     src: local('Gilroy Medium'), local('Gilroy-Medium'),
-        url('fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Gilroy-Medium.woff') format('woff'),
-        url('fonts/Gilroy-Medium.ttf') format('truetype');
+        url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
 }
+
 
 html, body {
     overflow-x: hidden;
@@ -93,7 +60,7 @@ html, body {
 body {
     background: url(../img/bg.png) repeat top;
     margin: 0;
-    font-family: 'Stolzl Display', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     font-weight: 400;
     color: $black;
 }
@@ -109,35 +76,31 @@ a {
 
 // titles and text
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Gilroy', sans-serif;
-    // font-family: 'Stolzl Display', sans-serif;
-    font-weight: 800;
+    font-weight: 700;
+    font-family: 'Stolzl Display', sans-serif;
+    font-weight: bold;
 }
 
 h1 {
     font-size: 48px;
     line-height: 120%;
     margin-bottom: 55px;
-    // font-weight: bold;
 }
 
 h2 {
     font-size: 36px;
     line-height: 120%;
-    // font-weight: bold;
 }
 
 h3 {
     font-size: 28px;
     line-height: 120%;
-    // font-weight: bold;
     
 }
 
 h4 {
     font-size: 22px;
     line-height: 120%;
-    // font-weight: bold;
 }
 
 .section__title {
