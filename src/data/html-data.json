@@ -40,15 +40,39 @@
     "projectCategories": ["WordPress", "HTML-Верстка"],
     "projects": [
         {
-            "title": "“Томт”",
-            "categories": ["WordPress"],
-            "image": "./img/portfolio/portfolio-img-tomt.png",
+            "title": "Bigmoney White",
+            "categories": ["HTML-Верстка"],
+            "image": "./img/portfolio/portfolio-img-bigmoney.png",
+            "content": [
+                "Тип сайта .......................................Лендинг",
+                "Кол-во уник. страниц ...................................... 1 стр.",
+                "Срок выполнения ............................................. 3 дня"
+            ],
+            "link": "https://bigmoneyuniversity.com/white/",
+            "show": "false" 
+        },
+        {
+            "title": "Just Social Panel",
+            "categories": ["HTML-Верстка"],
+            "image": "./img/portfolio/portfolio-img-dashboard.png",
+            "content": [
+                "Тип сайта .......................................Dashboard",
+                "Кол-во уник. страниц ...................................... 11 стр.",
+                "Срок выполнения ......................................... 4-5 дней"
+            ],
+            "link": "https://derevyanchenko.github.io/just-social-panel-dashboard/",
+            "show": "false" 
+        },
+        {
+            "title": "Just Social Panel",
+            "categories": ["HTML-Верстка"],
+            "image": "./img/portfolio/portfolio-img-social-main.png",
             "content": [
                 "Тип сайта .......................................Многостраничный",
-                "Кол-во уник. страниц ...................................... 10 стр.",
-                "Срок выполнения ............................................. 8 дней"
+                "Кол-во уник. страниц ...................................... 6 стр.",
+                "Срок выполнения ........................................... 4-5 дней"
             ],
-            "link": "https://google.com",
+            "link": "https://derevyanchenko.github.io/just-social-panel/",
             "show": "false" 
         },
         {
@@ -60,7 +84,7 @@
                 "Кол-во уник. страниц ........................................ 6 стр.",
                 "Срок выполнения ......................................... 4-5 дней"
             ],
-            "link": "https://google.com",
+            "link": "https://pozitiv.live/",
             "show": "false" 
         },
         {
@@ -72,19 +96,55 @@
                 "Кол-во уник. страниц ...................................... 10 стр.",
                 "Срок выполнения ............................................. 8 дней"
             ],
-            "link": "https://google.com",
+            "link": "https://cleaning-servis.ru/",
             "show": "false" 
         },
         {
-            "title": "“Pozitiv life”",
-            "categories": ["WordPress", "HTML-Верстка"],
-            "image": "./img/portfolio/portfolio-img-pozitiv.png",
+            "title": "Ooksu",
+            "categories": ["WordPress"],
+            "image": "./img/portfolio/portfolio-img-ooksu.png",
             "content": [
-                "Тип сайта ................................................................Блог",
-                "Кол-во уник. страниц ........................................ 6 стр.",
-                "Срок выполнения ......................................... 4-5 дней"
+                "Тип сайта ......................................Многостраничный",
+                "Кол-во уник. страниц ........................................ 7 стр.",
+                "Срок выполнения ......................................... 3-4 дня"
             ],
-            "link": "https://google.com",
+            "link": "https://derevyanchenko.000webhostapp.com/ooksu/",
+            "show": "false" 
+        },
+        {
+            "title": "“Laudon”",
+            "categories": ["WordPress"],
+            "image": "./img/portfolio/portfolio-img-laudon.png",
+            "content": [
+                "Тип сайта ......................................Многостраничный",
+                "Кол-во уник. страниц ........................................ 5 стр.",
+                "Срок выполнения ......................................... 2 дня"
+            ],
+            "link": "https://laudon.ru/",
+            "show": "false" 
+        },
+        {
+            "title": "Tuva Travel",
+            "categories": ["WordPress"],
+            "image": "./img/portfolio/portfolio-img-tuva.png",
+            "content": [
+                "Тип сайта .............................................Лендинг",
+                "Кол-во уник. страниц ...................................... 2 стр.",
+                "Срок выполнения ............................................. 1-2 дня"
+            ],
+            "link": "https://tuva-travel.com/ru/front-page/",
+            "show": "false" 
+        },
+        {
+            "title": "Villa Violetta",
+            "categories": ["WordPress", "HTML-Верстка"],
+            "image": "./img/portfolio/portfolio-img-violetta.png",
+            "content": [
+                "Тип сайта .......................................Лендинг",
+                "Кол-во уник. страниц ...................................... 1 стр.",
+                "Срок выполнения ............................................. 4 дня"
+            ],
+            "link": "https://derevyanchenko.000webhostapp.com/violetta/",
             "show": "false" 
         }
     ],
@@ -92,7 +152,19 @@
         {
             "title": "Booking Wp plugin",
             "content": "Плагин система-бронирования недвижимости для CMS WordPress",
+            "link": "https://github.com/Derevyanchenko/ddBooking"
+        },
+        {
+            "title": "Чистый Дом",
+            "content": "Корпоративный сайт",
             "link": "https://google.com"
+        }
+    ],
+    "futureGithubRepos": [
+        {
+            "title": "Booking Wp plugin",
+            "content": "Плагин система-бронирования недвижимости для CMS WordPress",
+            "link": "https://github.com/Derevyanchenko/ddBooking"
         },
         {
             "title": "WooCommerce shop",
@@ -144,10 +216,23 @@
         "./img/skills/contact-form.svg"
     ],
     "reviews": [
-        "./img/reviews/review-img-1.png",
-        "./img/reviews/review-img-1.png",
-        "./img/reviews/review-img-1.png",
-        "./img/reviews/review-img-1.png"
+        {
+            "mockup": "./img/reviews/review-img-1.png",
+            "fullImage": "./img/reviews/review-img-1-full.jpg"
+        },
+        {
+            "mockup": "./img/reviews/review-img-2.png",
+            "fullImage": "./img/reviews/review-img-2-full.jpg"
+        },
+        {
+            "mockup": "./img/reviews/review-img-3.png",
+            "fullImage": "./img/reviews/review-img-3-full.jpg"
+        },
+        {
+            "mockup": "./img/reviews/review-img-4.png",
+            "fullImage": "./img/reviews/review-img-4-full.jpg"
+        }
+       
     ],
     "copyright": "Danil Derevyanchenko © 2018-2021 All Rights Reserved."
 }
