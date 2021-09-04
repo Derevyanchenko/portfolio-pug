@@ -119,9 +119,16 @@ button {
 
   .reviews__wrapper {
     position: relative;
-    max-width: 900px;
+    // max-width: 900px;
+    max-width: calc(100% - 54px);
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .reviews__label {
+    padding: 13px 30px;
+    margin-bottom: 20px;
+    font-size: 12px;
   }
 
 // ##############################################

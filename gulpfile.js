@@ -74,6 +74,10 @@ gulp.task("copy:img", function(callback) {
     return gulp.src("./src/img/**/*.*").pipe(gulp.dest("./build/img/"));
     callback();
 });
+gulp.task("copy:images", function(callback) {
+    return gulp.src("./src/images/**/*.*").pipe(gulp.dest("./build/images/"));
+    callback();
+});
 
 // Копирование Шрифтов
 gulp.task("copy:fonts", function(callback) {
@@ -130,7 +134,7 @@ gulp.task(
     "default",
     gulp.series(
         gulp.parallel("clean:build"),
-        gulp.parallel("scss", "pug", "copy:img", "copy:fonts", "copy:js"),
+        gulp.parallel("scss", "pug", "copy:img", "copy:images", "copy:fonts", "copy:js"),
         gulp.parallel("server", "watch")
     )
 );

@@ -8,6 +8,7 @@ section.reviews#reviews
                 each img in jsonData.reviews
                     .col-xl-4.col-lg-4.reviews__slider-item
                         .reviews__item
+                            span.tab.reviews__label #{img.label}
                             a(href=img.fullImage, data-lightbox="image-1") 
                                 img(src=img.mockup, alt="")
 

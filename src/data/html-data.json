@@ -40,11 +40,11 @@
     "projectCategories": ["WordPress", "HTML-Верстка"],
     "projects": [
         {
-            "title": "Bigmoney White",
+            "title": "“Bigmoney White”",
             "categories": ["HTML-Верстка"],
             "image": "./img/portfolio/portfolio-img-bigmoney.png",
             "content": [
-                "Тип сайта .......................................Лендинг",
+                "Тип сайта ........................................................Лендинг",
                 "Кол-во уник. страниц ...................................... 1 стр.",
                 "Срок выполнения ............................................. 3 дня"
             ],
@@ -52,11 +52,11 @@
             "show": "false" 
         },
         {
-            "title": "Just Social Panel",
+            "title": "“Just Social Panel”",
             "categories": ["HTML-Верстка"],
             "image": "./img/portfolio/portfolio-img-dashboard.png",
             "content": [
-                "Тип сайта .......................................Dashboard",
+                "Тип сайта .....................................................Dashboard",
                 "Кол-во уник. страниц ...................................... 11 стр.",
                 "Срок выполнения ......................................... 4-5 дней"
             ],
@@ -64,12 +64,12 @@
             "show": "false" 
         },
         {
-            "title": "Just Social Panel",
+            "title": "“Just Social Panel”",
             "categories": ["HTML-Верстка"],
             "image": "./img/portfolio/portfolio-img-social-main.png",
             "content": [
                 "Тип сайта .......................................Многостраничный",
-                "Кол-во уник. страниц ...................................... 6 стр.",
+                "Кол-во уник. страниц ........................................... 6 стр.",
                 "Срок выполнения ........................................... 4-5 дней"
             ],
             "link": "https://derevyanchenko.github.io/just-social-panel/",
@@ -100,13 +100,13 @@
             "show": "false" 
         },
         {
-            "title": "Ooksu",
+            "title": "“Ooksu”",
             "categories": ["WordPress"],
             "image": "./img/portfolio/portfolio-img-ooksu.png",
             "content": [
                 "Тип сайта ......................................Многостраничный",
                 "Кол-во уник. страниц ........................................ 7 стр.",
-                "Срок выполнения ......................................... 3-4 дня"
+                "Срок выполнения ............................................ 3-4 дня"
             ],
             "link": "https://derevyanchenko.000webhostapp.com/ooksu/",
             "show": "false" 
@@ -118,17 +118,17 @@
             "content": [
                 "Тип сайта ......................................Многостраничный",
                 "Кол-во уник. страниц ........................................ 5 стр.",
-                "Срок выполнения ......................................... 2 дня"
+                "Срок выполнения ................................................ 2 дня"
             ],
             "link": "https://laudon.ru/",
             "show": "false" 
         },
         {
-            "title": "Tuva Travel",
+            "title": "“Tuva Travel”",
             "categories": ["WordPress"],
             "image": "./img/portfolio/portfolio-img-tuva.png",
             "content": [
-                "Тип сайта .............................................Лендинг",
+                "Тип сайта ........................................................Лендинг",
                 "Кол-во уник. страниц ...................................... 2 стр.",
                 "Срок выполнения ............................................. 1-2 дня"
             ],
@@ -136,11 +136,11 @@
             "show": "false" 
         },
         {
-            "title": "Villa Violetta",
+            "title": "“Villa Violetta”",
             "categories": ["WordPress", "HTML-Верстка"],
             "image": "./img/portfolio/portfolio-img-violetta.png",
             "content": [
-                "Тип сайта .......................................Лендинг",
+                "Тип сайта ........................................................Лендинг",
                 "Кол-во уник. страниц ...................................... 1 стр.",
                 "Срок выполнения ............................................. 4 дня"
             ],
@@ -155,9 +155,9 @@
             "link": "https://github.com/Derevyanchenko/ddBooking"
         },
         {
-            "title": "Чистый Дом",
+            "title": "Tomt",
             "content": "Корпоративный сайт",
-            "link": "https://google.com"
+            "link": "https://github.com/Derevyanchenko/tomt"
         }
     ],
     "futureGithubRepos": [
@@ -180,6 +180,9 @@
             "title": "Gutenberg blocks with React.js",
             "content": "Разработка своих виджетов для блочного редактора Gutenberg, написан на React.js",
             "link": "https://google.com"
+        },
+        {
+            "Skill": "- Разработка собственных блоков для Gutenberg "
         }
     ],
     "skills": [
@@ -199,7 +202,6 @@
                "- Разработка Wordpress тем",
                "- Разработка Wordpress плагинов",
                "- Разработка WooCommerce тем (базовые навыки)",
-               "- Разработка собственных блоков для Gutenberg ",
                "- Плагины: ACF, CPT, WooCommerce, Polylang, Contact Form 7"
             ]
         }
@@ -217,18 +219,22 @@
     ],
     "reviews": [
         {
+            "label": "PM C3PA.NET",
             "mockup": "./img/reviews/review-img-1.png",
             "fullImage": "./img/reviews/review-img-1-full.jpg"
         },
         {
+            "label": "Bonch Agency",
             "mockup": "./img/reviews/review-img-2.png",
             "fullImage": "./img/reviews/review-img-2-full.jpg"
         },
         {
+            "label": "PM RGB Agency",
             "mockup": "./img/reviews/review-img-3.png",
             "fullImage": "./img/reviews/review-img-3-full.jpg"
         },
         {
+            "label": "Клиент по рекомендации",
             "mockup": "./img/reviews/review-img-4.png",
             "fullImage": "./img/reviews/review-img-4-full.jpg"
         }
